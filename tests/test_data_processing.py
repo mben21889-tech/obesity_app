@@ -2,13 +2,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
  
 # ============================================
 # 1. CHARGEMENT DES DONNÉES
 # ============================================
-df = pd.read_csv('.../data/DatasetObesity.csv')
-print(df.shape)
-print(df.head())
+#df = pd.read_csv('.../data/ObesityDataSet.csv')
+#print(df.shape)
+#print(df.head())
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+df = pd.read_csv(os.path.join(BASE_DIR, '..', 'data', 'ObesityDataSet.csv'))
+
 
 
 # ============================================
