@@ -33,3 +33,7 @@ Ce projet est entièrement reproductible en suivant ces commandes dans votre ter
 **1. Installer les dépendances :**
 ```bash
 pip install -r requirements.txt
+**2. Lancer l'interface utilisateur (Streamlit) :**
+```bash
+streamlit run app/app.py
+python -m pytest
