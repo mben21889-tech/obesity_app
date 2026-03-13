@@ -23,7 +23,12 @@ le.fit(classes_obosite)
 # 3. On sauvegarde le fichier au bon endroit
 joblib.dump(le, '/content/app/models/label_encoder.pkl')
 
-print("✅ Fichier 'app/label_encoder.pkl' recréé avec succès !") import matplotlib.pyplot as plt
+print("✅ Fichier 'app/label_encoder.pkl' recréé avec succès !")
+
+
+
+
+import matplotlib.pyplot as plt
 import shap
 import os
 import joblib
