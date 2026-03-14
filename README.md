@@ -21,8 +21,15 @@ Projet développé dans le cadre de la Coding Week (École Centrale Casablanca).
 
 ### 4. Prompt Engineering : Quelle a été l'utilité des prompts pour la tâche sélectionnée ?
 **Tâche ciblée :** Développement de la fonction d'optimisation mémoire `optimize_memory(df)`.
-* **Prompt utilisé :** *"Génère une fonction Python robuste nommée optimize_memory(df) pour réduire l'utilisation de la RAM d'un DataFrame Pandas en downcastant les entiers (int64 vers int32/16/8) et les flottants en fonction de leurs valeurs min/max, et en transformant les objets de type string en 'category'. Utilise numpy.iinfo et numpy.finfo. Affiche le pourcentage de mémoire gagnée."*
+* **Prompt utilisé :** *Écris une fonction Python qui prend un Data et optimise son utilisation mémoire sans perte de données. Affiche la mémoire utilisée avant et après.*
 * **Insights obtenus :** L'utilisation de ce prompt très directif a permis d'obtenir un code prêt pour la production dès la première itération. Nous avons appris qu'en ingénierie de prompt, contraindre l'IA à utiliser des bibliothèques spécifiques (`numpy.iinfo`) l'empêche de proposer des solutions de contournement naïves ou instables, ce qui garantit un code beaucoup plus fiable.
+* **Efficacité du prompt:** *Le prompt était court, clair et directement actionnable. La contrainte 
+"sans perte de données" a orienté le modèle vers l'utilisation des bornes 
+numpy (iinfo, finfo), et la demande d'affichage avant/après a été 
+correctement intégrée dans le résultat.*
+* **Limites:** *Le prompt ne mentionnait pas les colonnes catégorielles (`object`), 
+qui peuvent aussi être optimisées avec le type `category`, et aucune 
+gestion des valeurs `NaN` n'a été demandée ni générée.*
 
 ---
 
